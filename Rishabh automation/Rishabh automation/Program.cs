@@ -23,12 +23,25 @@ passwordTextbox.SendKeys("123123");
 
 //identify login button and click on it
 
-IWebElement Loginbutton = driver.FindElement(By.XPath("//*[@id='loginForm'']/form/div[3]/input[1]"));
+IWebElement Loginbutton = driver.FindElement(By.XPath("//*[@id='loginForm']/form/div[3]/input[1]"));
 Loginbutton.Click();
 
 //check if user is logged in successfully
 
-//IWebElement 
+IWebElement helloHari = driver.FindElement(By.XPath("//*[@id='logoutForm']/ul/li/a")); 
+
+if (helloHari.Text== "Hello hari!")
+{
+    Console.WriteLine("Login was successful,test passed");
+
+}
+else
+{
+    Console.WriteLine("test failed");
+
+}
+
+
 
 
 
